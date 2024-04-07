@@ -19,3 +19,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.navbar-menu .active {
+  @apply pb-1 border-b-2 border-solid border-gray-900;
+}
