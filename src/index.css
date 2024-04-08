@@ -8,7 +8,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
 }
 
 body {
@@ -22,4 +21,9 @@ a {
 
 .navbar-menu .active {
   @apply pb-1 border-b-2 border-solid border-gray-900;
+}
+
+.header {
+  height: 34vw;
+  background: url('assets/header_img.png');
 }
