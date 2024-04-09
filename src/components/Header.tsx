@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <div className="header rounded-3xl my-8 mx-auto bg-contain relative">
-      <div className="header-contents absolute flex flex-col items-start gap-4 w-1/2 bottom-12 left-12">
+      <div className="header-contents animate-fadein absolute flex flex-col items-start gap-4 w-1/2 bottom-12 left-12">
         <h2 className="text-white font-medium text-6xl leading-tight mb-1">
           Order your favourite food here
         </h2>
