@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: { outfit: ['Outfit', 'sans-serif'] },
       keyframes: {
-        fadeIn: {
+        fadein: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
