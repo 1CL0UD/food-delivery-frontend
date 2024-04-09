@@ -35,6 +35,10 @@ a {
   @apply pb-1 border-b-2 border-solid border-gray-900;
 }
 
+.explore-menu-list-item .active {
+  @apply border-4 border-orange-600 rounded-full p-0.5;
+}
+
 .header {
   height: 34vw;
   background: url('assets/header_img.png');
