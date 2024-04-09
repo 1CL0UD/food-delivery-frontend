@@ -5,11 +5,12 @@ export default {
     extend: {
       fontFamily: { outfit: ['Outfit', 'sans-serif'] },
       keyframes: {
-        fadein: {
+        fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
       },
+      animation: { fadein: 'fadeIn 2s' },
     },
   },
   plugins: [],
