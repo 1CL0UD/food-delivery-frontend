@@ -14,7 +14,7 @@ interface Props {
   children: ReactNode;
 }
 
-interface ContextValue {
+export interface ContextValue {
   food_list: FoodList[];
 }
 
