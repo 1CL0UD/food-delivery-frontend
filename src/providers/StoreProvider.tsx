@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 import { food_list } from '../assets/assets';
 
 export interface FoodList {
@@ -41,6 +41,10 @@ const StoreContextProvider = ({ children }: Props) => {
   const removeFromCart = (itemId: string): void => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
+
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
 
   const contextValue: ContextValue = {
     food_list,
