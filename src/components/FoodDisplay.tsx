@@ -12,7 +12,7 @@ const FoodDisplay = ({ category }: Props) => {
       <h2 className="text-2xl font-bold">Top Dishes ({category})</h2>
       <div className="food-display-list grid grid-cols-4 mt-8 gap-8 gap-y-12">
         {food_list.map((item) => {
-          return <FoodItem item={item} />;
+          return <FoodItem key={item._id} item={item} />;
         })}
       </div>
     </div>
