@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, ReactNode, useState } from 'react';
 import { food_list } from '../assets/assets';
 
 export interface FoodList {
@@ -16,12 +16,39 @@ interface Props {
 
 export interface ContextValue {
   food_list: FoodList[];
+  cartItems: CartItems;
+  setCartItems: React.Dispatch<React.SetStateAction<CartItems>>;
+  addToCart: (itemId: string) => void;
+  removeFromCart: (itemId: string) => void;
+}
+
+interface CartItems {
+  [itemId: string]: number;
 }
 
 export const StoreContext = createContext<ContextValue | null>(null);
 
 const StoreContextProvider = ({ children }: Props) => {
-  const contextValue: ContextValue = { food_list };
+  const [cartItems, setCartItems] = useState<CartItems>({});
+
+  const addToCart = (itemId: string): void => {
+    setCartItems((prev) => ({
+      ...prev,
+      [itemId]: prev[itemId] ? prev[itemId] + 1 : 1,
+    }));
+  };
+
+  const removeFromCart = (itemId: string): void => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
+
+  const contextValue: ContextValue = {
+    food_list,
+    cartItems,
+    setCartItems,
+    addToCart,
+    removeFromCart,
+  };
   return (
     <StoreContext.Provider value={contextValue}>
       {children}
