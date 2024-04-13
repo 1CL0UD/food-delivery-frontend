@@ -1,7 +1,7 @@
 import { createContext, ReactNode } from 'react';
 import { food_list } from '../assets/assets';
 
-interface FoodList {
+export interface FoodList {
   _id: string;
   name: string;
   image: string;
