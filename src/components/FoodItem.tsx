@@ -1,37 +1,46 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import { assets } from '../assets/assets';
-import { FoodList } from '../providers/StoreProvider';
+import {
+  ContextValue,
+  FoodList,
+  StoreContext,
+} from '../providers/StoreProvider';
 
 interface Props {
   item: FoodList;
 }
 const FoodItem = ({ item }: Props) => {
-  const [itemCount, setItemCount] = useState(0);
+  const { cartItems, addToCart, removeFromCart } = useContext(
+    StoreContext
+  ) as ContextValue;
   return (
-    <div className="food-item w-full m-auto rounded-2xl shadow-lg animate-fadein">
+    <div
+      className="food-item w-full m-auto rounded-2xl saddToCart: (itemId: string) => void;
+  removeFromCart: (itemId: string) => void;adow-lg animate-fadein"
+    >
       <div className="food-item-img-container relative">
         <img
           className="food-item-image rounded-t-2xl w-full"
           src={item.image}
           alt=""
         />
-        {!itemCount ? (
+        {!cartItems[item._id] ? (
           <img
             className="add absolute w-10 bottom-4 right-4 cursor-pointer rounded-full transition ease-in-out hover:-translate-x-1"
-            onClick={() => setItemCount((prev) => prev + 1)}
+            onClick={() => addToCart(item._id)}
             src={assets.add_icon_white}
           />
         ) : (
           <div className="food-item-counter absolute bottom-4 right-4 flex items-center gap-3 p-1 rounded-full bg-white">
             <img
               className="w-8 cursor-pointer"
-              onClick={() => setItemCount((prev) => prev - 1)}
+              onClick={() => removeFromCart(item._id)}
               src={assets.remove_icon_red}
             />
-            <p>{itemCount}</p>
+            <p>{cartItems[item._id]}</p>
             <img
               className="w-8 cursor-pointer"
-              onClick={() => setItemCount((prev) => prev + 1)}
+              onClick={() => addToCart(item._id)}
               src={assets.add_icon_green}
             />
           </div>
