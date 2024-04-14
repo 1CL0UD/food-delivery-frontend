@@ -43,3 +43,7 @@ a {
   height: 34vw;
   background: url('assets/header_img.png') no-repeat;
 }
+
+.footer-content-item {
+  @apply flex flex-col items-start gap-4;
+}
