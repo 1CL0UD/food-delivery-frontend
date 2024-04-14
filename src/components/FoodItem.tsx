@@ -14,10 +14,7 @@ const FoodItem = ({ item }: Props) => {
     StoreContext
   ) as ContextValue;
   return (
-    <div
-      className="food-item w-full m-auto rounded-2xl saddToCart: (itemId: string) => void;
-  removeFromCart: (itemId: string) => void;adow-lg animate-fadein"
-    >
+    <div className="food-item w-full m-auto rounded-2xl shadow-lg animate-fadein">
       <div className="food-item-img-container relative">
         <img
           className="food-item-image rounded-t-2xl w-full"
