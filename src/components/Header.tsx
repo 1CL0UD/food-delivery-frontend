@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="header hover:scale-105 h-[40vw] rounded-3xl my-8 mx-auto bg-contain relative">
+    <div className="header hover:scale-105 h-[40vw] rounded-3xl my-8 mx-auto relative">
       <div className="header-contents animate-fadein absolute flex flex-col items-start gap-2 md:gap-4 w-3/4 md:w-2/3 bottom-6 lg:bottom-12 left-6 lg:left-12">
         <h2 className="text-white font-medium text-xl sm:text-2xl md:text-6xl xl:text-6xl leading-tight mb-1">
           Order your favourite food here
