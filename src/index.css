@@ -32,7 +32,11 @@ a {
 }
 
 .navbar-menu .active {
-  @apply pb-1 border-b-2 border-solid border-gray-900;
+  @apply pb-1 border-b-2 border-solid border-orange-600 text-orange-600;
+}
+
+.navbar-menu li {
+  @apply cursor-pointer hover:text-orange-600;
 }
 
 .explore-menu-list-item .active {
@@ -41,6 +45,8 @@ a {
 
 .header {
   background: url('assets/header_img.png') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .footer-content-item {

@@ -11,7 +11,7 @@ const Navbar = () => {
           onClick={() => {
             setMenu('home');
           }}
-          className={`${menu == 'home' ? 'active' : ''} cursor-pointer`}
+          className={`${menu == 'home' ? 'active' : ''} `}
         >
           home
         </li>
@@ -19,7 +19,7 @@ const Navbar = () => {
           onClick={() => {
             setMenu('menu');
           }}
-          className={`${menu == 'menu' ? 'active' : ''} cursor-pointer`}
+          className={`${menu == 'menu' ? 'active' : ''} `}
         >
           menu
         </li>
@@ -27,7 +27,7 @@ const Navbar = () => {
           onClick={() => {
             setMenu('mobile-app');
           }}
-          className={`${menu == 'mobile-app' ? 'active' : ''} cursor-pointer`}
+          className={`${menu == 'mobile-app' ? 'active' : ''} `}
         >
           mobile apps
         </li>
@@ -35,7 +35,7 @@ const Navbar = () => {
           onClick={() => {
             setMenu('contact-us');
           }}
-          className={`${menu == 'contact-us' ? 'active' : ''} cursor-pointer`}
+          className={`${menu == 'contact-us' ? 'active' : ''} `}
         >
           contact us
         </li>
