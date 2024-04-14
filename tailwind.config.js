@@ -10,7 +10,7 @@ export default {
           '100%': { opacity: '1' },
         },
       },
-      animation: { fadein: 'fadeIn' },
+      animation: { fadein: 'fadeIn 1s' },
     },
   },
   plugins: [],
