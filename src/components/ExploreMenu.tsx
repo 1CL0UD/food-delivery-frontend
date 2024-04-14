@@ -12,13 +12,13 @@ const ExploreMenu = ({ category, setCategory }: Props) => {
       <p className="explore-menu-desc max-w-full md:max-w-[50] lg:max-w-[60%]">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, velit?
       </p>
-      <div className="explore-menu-list flex justify-between items-center gap-8 text-center my-5 mx-0 overflow-x-scroll no-scrollbar">
+      <div className="explore-menu-list flex justify-between items-center gap-8 text-center p-4 my-5 mx-0 overflow-x-scroll no-scrollbar">
         {menu_list.map((item, index) => {
           return (
             <div
               onClick={() => setCategory(item.menu_name)}
               key={index}
-              className="explore-menu-list-item"
+              className="explore-menu-list-item hover:scale-105"
             >
               <img
                 src={item.menu_image}
