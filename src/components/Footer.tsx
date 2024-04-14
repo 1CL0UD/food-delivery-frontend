@@ -6,8 +6,8 @@ const Footer = () => {
       className="footer text-gray-200 bg-gray-800 flex flex-col items-center gap-4 py-4 px-[8vw] pt-20"
       id="footer"
     >
-      <div className="footer-content w-full grid grid-cols-4 gap-20 mb-8">
-        <div className="flex flex-col items-start gap-4 col-span-2">
+      <div className="footer-content w-full grid md:grid-cols-4 grid-cols-2 gap-20 mb-8">
+        <div className="flex flex-col items-start gap-4 md:col-span-2">
           <img src={assets.logo} alt="Logo" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem

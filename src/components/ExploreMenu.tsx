@@ -9,7 +9,7 @@ const ExploreMenu = ({ category, setCategory }: Props) => {
   return (
     <div className="explore-menu flex flex-col gap-5" id="explore-menu">
       <h1 className="text-gray-800 font-medium">Explore Our Menu</h1>
-      <p className="explore-menu-desc max-w-[60%]">
+      <p className="explore-menu-desc max-w-full md:max-w-[50] lg:max-w-[60%]">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, velit?
       </p>
       <div className="explore-menu-list flex justify-between items-center gap-8 text-center my-5 mx-0 overflow-x-scroll no-scrollbar">

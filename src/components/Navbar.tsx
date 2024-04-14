@@ -5,8 +5,8 @@ const Navbar = () => {
   const [menu, setMenu] = useState('home');
   return (
     <div className="p-5 flex justify-between items-center">
-      <img src={assets.logo} alt="logo" className="w-36" />
-      <ul className="navbar-menu flex list-none gap-5 text-gray-900 text-lg">
+      <img src={assets.logo} alt="logo" className="w-24 md:w-36" />
+      <ul className="navbar-menu hidden lg:flex list-none gap-5 text-gray-900 text-lg">
         <li
           onClick={() => {
             setMenu('home');
@@ -41,8 +41,8 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-right flex items-center gap-10">
-        <img src={assets.search_icon} alt="" />
-        <div className="navbar-search-icon relative">
+        <img className="hidden sm:block" src={assets.search_icon} alt="" />
+        <div className="navbar-search-icon relative hidden sm:block">
           <img src={assets.basket_icon} alt="" />
           <div className="dot absolute min-w-3 min-h-3 bg-orange-600 rounded-full -top-2 -right-2"></div>
         </div>
